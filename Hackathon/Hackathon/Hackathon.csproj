@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fakehardware\sensors\Infrared.cs" />
+    <Compile Include="fakehardware\sensors\Sonar.cs" />
+    <Compile Include="interfaces\IDistance.cs" />
+    <Compile Include="hardware\sensors\Infrared.cs" />
+    <Compile Include="hardware\sensors\Sonar.cs" />
     <Compile Include="Rover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
