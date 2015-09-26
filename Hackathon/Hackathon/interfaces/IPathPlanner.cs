@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hackathon.interfaces;
+using Hackathon.math;
 
-namespace Hackathon.hardware.sensors {
-    class Infrared : IDistance {
+namespace Hackathon.interfaces {
+    interface IPathPlanner {
+        void MoveTo(Vector2 position);
     }
 }

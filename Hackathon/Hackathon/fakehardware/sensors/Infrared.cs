@@ -5,10 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Hackathon.interfaces;
 
-namespace Hackathon.fakehardware.sensors
-{
-    class Infrared : IDistance
-    {
+namespace Hackathon.fakehardware.sensors {
+    class Infrared : IDistance {
         public double Distance { get { return 0; } }
     }
 }

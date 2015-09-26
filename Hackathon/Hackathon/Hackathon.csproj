@@ -45,9 +45,22 @@
   <ItemGroup>
     <Compile Include="fakehardware\sensors\Infrared.cs" />
     <Compile Include="fakehardware\sensors\Sonar.cs" />
+    <Compile Include="fakehardware\Wheel.cs" />
+    <Compile Include="hardware\Wheel.cs" />
     <Compile Include="interfaces\IDistance.cs" />
     <Compile Include="hardware\sensors\Infrared.cs" />
     <Compile Include="hardware\sensors\Sonar.cs" />
+    <Compile Include="interfaces\ILocalisation.cs" />
+    <Compile Include="interfaces\IPathPlanner.cs" />
+    <Compile Include="interfaces\IRobot.cs" />
+    <Compile Include="interfaces\IWheel.cs" />
+    <Compile Include="interfaces\IOdometry.cs" />
+    <Compile Include="localisation\Localisation.cs" />
+    <Compile Include="math\Vector2.cs" />
+    <Compile Include="odometry\Odometry.cs" />
+    <Compile Include="pathplanner\PathPlanner.cs" />
+    <Compile Include="robot\FakeRobot.cs" />
+    <Compile Include="robot\Robot.cs" />
     <Compile Include="Rover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

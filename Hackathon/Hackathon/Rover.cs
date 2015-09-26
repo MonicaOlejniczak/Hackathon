@@ -4,29 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hackathon.interfaces;
-using Hackathon.fakehardware.sensors;
+using Hackathon.robot;
+using Hackathon.math;
+using Hackathon.localisation;
+using Hackathon.odometry;
+using Hackathon.pathplanner;
 
 namespace Hackathon {
     class Rover {
-        private IDistance[] sensors;
+        private IRobot robot;
+        private ILocalisation localisation;
+        private IOdometry odometry;
+        private IPathPlanner pathPlanner;
 
         public Rover() {
-            sensors = new IDistance[] {
-                new Infrared(),
-                new Sonar(),
-                new Sonar(),
-                new Sonar()
-            };
-
-            Run();
+            //robot = new Robot();
+            robot = new FakeRobot();
+            odometry = new Odometry(robot);
+            localisation = new Localisation();
+            pathPlanner = new PathPlanner(robot, localisation);
         }
 
         private void Run() {
-            Console.WriteLine("Sensors {0}", sensors.Length);
+            pathPlanner.MoveTo(new Vector2(0, 1));
         }
 
         static void Main(string[] args) {
-            new Rover();
+            var rover = new Rover();
+            rover.Run();
         }
     }
 }

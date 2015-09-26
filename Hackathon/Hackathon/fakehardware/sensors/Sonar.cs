@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 using Hackathon.interfaces;
 using Hackathon.hardware.sensors;
 
-namespace Hackathon.fakehardware.sensors
-{
-    class Sonar : IDistance
-    {
+namespace Hackathon.fakehardware.sensors {
+    class Sonar : IDistance {
         public double Distance { get { return 0; } }
     }
 }
